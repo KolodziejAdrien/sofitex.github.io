@@ -3,11 +3,592 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../styles/contracts.css">
+    <link rel="stylesheet" href="./../styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
+        <!-- sideNav section -->
+        <section id="sidenav">
+            <div class="sidenav container">
+                <div class="brand">
+                    <h2>Sofitex</h2>
+                    <h3>Talent recruitement</h3>
+                </div>
+                <div class="links">
+                    <div class="link-item">
+                        <a href="./dashboard.html">
+                        <div class="icon">
+                            <i class="far fa-clipboard"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Dashboard</h3>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="link-item">
+                        <a href="./contracts.html">
+                        <div class="icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Contracts</h3>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon">
+                            <i class="far fa-file-alt"></i>
+                        </div>
+                        <div class="content">
+                            <h3>invoices</h3>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon">
+                            <i class="far fa-folder"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Orders</h3>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Hourly Records</h3>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Users</h3>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon">
+                            <i class="far fa-comment-dots"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Messaging</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="linkss">
+                    <div class="link-items">
+                        <div class="icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Settings</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End sideNav section -->
+
+        <section id="main">
+                     <!-- header section -->
+         <section id="header">
+            <div class="header container">
+                <div class="dashboard">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <h2>Contracts</h2>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user">
+                    <div class="icon">
+                        <div class="notif"></div>
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="img-profil">
+                    <div class="notif">
+                        <p>4</p>
+                    </div>
+                    <div class="img">
+                        <img src="./../img/profil.jpg" alt="">
+                    </div>
+                    </div>
+                    <div class="content">
+                        <h3>James Rhoads</h3>
+                        <p>james.r@example.com</p>
+                    </div>
+                    <div class="arrow">
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End header section -->
+
+        <!-- Contract section -->
+        <section id="contract">
+            <div class="contrat container">
+                <div class="header">
+                    <div class="current">
+                        <h2>Current Contracts</h2>
+                        <p>( 61 )</p>
+                    </div>
+                    <div class="icon">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="checkBox custom-checkbox">
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </div>
+                        <ul>
+                        <li>Agency Info <i class="fas fa-bars"></i><i class="fas fa-arrow-up"></i></li>
+                        <li>Client Info <i class="fas fa-bars"></i><i class="fas fa-arrow-up"></i></li>
+                        <li>Temp/job <i class="fas fa-bars"></i><i class="fas fa-arrow-up"></i></li>
+                        <li>Start/end date <i class="fas fa-bars"></i><i class="fas fa-arrow-up"></i></li>
+                        <li>status</li>
+                        </ul>
+                </div>
+                <div class="sign-item">
+                    <div class="checkBox custom-checkbox">
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </div>
+                <div class="signs-item">
+                    <div class="signs spe">
+                        <div class="img">
+                            <img src="./../img/earth.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3><strong>Sofitex</strong></h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Metz</p>
+                            </div>
+                            <div class="carre">
+                                <i class="far fa-sticky-note"></i>
+                                <p>5050_0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signs">
+                        <h2>Process Tech...</h2>
+                        <p>S76978</p>
+                    </div>
+                    <div class="signs">
+                        <h2>Bruce H</h2>
+                        <p>QA</p>
+                    </div>
+                    <div class="signs">
+                        <div class="start">
+                            <p>Starts</p>
+                            <h2>06/06/2008</h2>
+                        </div>
+                        <div class="end">
+                            <p>End</p>
+                            <h2>26/06/2010</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="signbtn signs">
+                    <a href="">To Sign</a>
+                </div>
+            </div>
+            <div class="sign-item">
+                <div class="checkBox custom-checkbox">
+                    <input type="checkbox" >
+                    <span class="checkmark"></span>
+                </div>
+            <div class="signs-item">
+                <div class="signs spe">
+                    <div class="img">
+                        <img src="./../img/earth.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3><strong>Sofitex</strong></h3>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Metz</p>
+                        </div>
+                        <div class="carre">
+                            <i class="far fa-sticky-note"></i>
+                            <p>5050_0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="signs">
+                    <h2>Process Tech...</h2>
+                    <p>S76978</p>
+                </div>
+                <div class="signs">
+                    <h2>Bruce H</h2>
+                    <p>QA</p>
+                </div>
+                <div class="signs">
+                    <div class="start">
+                        <p>Starts</p>
+                        <h2>06/06/2008</h2>
+                    </div>
+                    <div class="end">
+                        <p>End</p>
+                        <h2>26/06/2010</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="signbtn signs">
+                <a href="">To Sign</a>
+            </div>
+        </div>
+        <div class="sign-item">
+            <div class="checkBox custom-checkbox">
+                <input type="checkbox" >
+                <span class="checkmark"></span>
+            </div>
+        <div class="signs-item">
+            <div class="signs spe">
+                <div class="img">
+                    <img src="./../img/earth.png" alt="">
+
+                </div>
+                <div class="content">
+                    <h3><strong>Sofitex</strong></h3>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Metz</p>
+                    </div>
+                    <div class="carre">
+                        <i class="far fa-sticky-note"></i>
+                        <p>5050_0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="signs">
+                <h2>Process Tech...</h2>
+                <p>S76978</p>
+            </div>
+            <div class="signs">
+                <h2>Bruce H</h2>
+                <p>QA</p>
+            </div>
+            <div class="signs">
+                <div class="start">
+                    <p>Starts</p>
+                    <h2>06/06/2008</h2>
+                </div>
+                <div class="end">
+                    <p>End</p>
+                    <h2>26/06/2010</h2>
+                </div>
+            </div>
+        </div>
+        <div class="signbtn signs">
+            <a href="">To Sign</a>
+        </div>
+    </div>
+    <div class="sign-item">
+        <div class="checkBox custom-checkbox">
+            <input type="checkbox" >
+            <span class="checkmark"></span>
+        </div>
+    <div class="signs-item">
+        <div class="signs spe">
+            <div class="img">
+                <img src="./../img/earth.png" alt="">
+
+            </div>
+            <div class="content">
+                <h3><strong>Sofitex</strong></h3>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Metz</p>
+                </div>
+                <div class="carre">
+                    <i class="far fa-sticky-note"></i>
+                    <p>5050_0</p>
+                </div>
+            </div>
+        </div>
+        <div class="signs">
+            <h2>Process Tech...</h2>
+            <p>S76978</p>
+        </div>
+        <div class="signs">
+            <h2>Bruce H</h2>
+            <p>QA</p>
+        </div>
+        <div class="signs">
+            <div class="start">
+                <p>Starts</p>
+                <h2>06/06/2008</h2>
+            </div>
+            <div class="end">
+                <p>End</p>
+                <h2>26/06/2010</h2>
+            </div>
+        </div>
+    </div>
+    <div class="signbtn signs">
+        <a href="">To Sign</a>
+    </div>
+</div>
+<div class="sign-item">
+    <div class="checkBox custom-checkbox">
+        <input type="checkbox" >
+        <span class="checkmark"></span>
+    </div>
+<div class="signs-item">
+    <div class="signs spe">
+        <div class="img">
+            <img src="./../img/earth.png" alt="">
+
+        </div>
+        <div class="content">
+            <h3><strong>Sofitex</strong></h3>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Metz</p>
+            </div>
+            <div class="carre">
+                <i class="far fa-sticky-note"></i>
+                <p>5050_0</p>
+            </div>
+        </div>
+    </div>
+    <div class="signs">
+        <h2>Process Tech...</h2>
+        <p>S76978</p>
+    </div>
+    <div class="signs">
+        <h2>Bruce H</h2>
+        <p>QA</p>
+    </div>
+    <div class="signs">
+        <div class="start">
+            <p>Starts</p>
+            <h2>06/06/2008</h2>
+        </div>
+        <div class="end">
+            <p>End</p>
+            <h2>26/06/2010</h2>
+        </div>
+    </div>
+</div>
+<div class="signbtn signs">
+    <a href="">To Sign</a>
+</div>
+</div>
+<div class="sign-item">
+    <div class="checkBox custom-checkbox">
+        <input type="checkbox" >
+        <span class="checkmark"></span>
+    </div>
+<div class="signs-item">
+    <div class="signs spe">
+        <div class="img">
+            <img src="./../img/earth.png" alt="">
+
+        </div>
+        <div class="content">
+            <h3><strong>Sofitex</strong></h3>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Metz</p>
+            </div>
+            <div class="carre">
+                <i class="far fa-sticky-note"></i>
+                <p>5050_0</p>
+            </div>
+        </div>
+    </div>
+    <div class="signs">
+        <h2>Process Tech...</h2>
+        <p>S76978</p>
+    </div>
+    <div class="signs">
+        <h2>Bruce H</h2>
+        <p>QA</p>
+    </div>
+    <div class="signs">
+        <div class="start">
+            <p>Starts</p>
+            <h2>06/06/2008</h2>
+        </div>
+        <div class="end">
+            <p>End</p>
+            <h2>26/06/2010</h2>
+        </div>
+    </div>
+</div>
+<div class="signbtn signs">
+    <a href="">To Sign</a>
+</div>
+</div>
+<div class="sign-item">
+    <div class="checkBox custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </div>
+<div class="signs-item">
+    <div class="signs spe">
+        <div class="img">
+            <img src="./../img/earth.png" alt="">
+
+        </div>
+        <div class="content">
+            <h3><strong>Sofitex</strong></h3>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Metz</p>
+            </div>
+            <div class="carre">
+                <i class="far fa-sticky-note"></i>
+                <p>5050_0</p>
+            </div>
+        </div>
+    </div>
+    <div class="signs">
+        <h2>Process Tech...</h2>
+        <p>S76978</p>
+    </div>
+    <div class="signs">
+        <h2>Bruce H</h2>
+        <p>QA</p>
+    </div>
+    <div class="signs">
+        <div class="start">
+            <p>Starts</p>
+            <h2>06/06/2008</h2>
+        </div>
+        <div class="end">
+            <p>End</p>
+            <h2>26/06/2010</h2>
+        </div>
+    </div>
+</div>
+<div class="signbtn signs">
+    <a href="">To Sign</a>
+</div>
+</div>
+<div class="sign-item">
+    <div class="checkBox custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </div>
+<div class="signs-item">
+    <div class="spe">
+        <div class="img">
+            <img src="./../img/earth.png" alt="">
+
+        </div>
+        <div class="content">
+            <h3><strong>Sofitex</strong></h3>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Metz</p>
+            </div>
+            <div class="carre">
+                <i class="far fa-sticky-note"></i>
+                <p>5050_0</p>
+            </div>
+        </div>
+    </div>
+    <div class="signs">
+        <h2>Process Tech...</h2>
+        <p>S76978</p>
+    </div>
+    <div class="signs">
+        <h2>Bruce H</h2>
+        <p>QA</p>
+    </div>
+    <div class="signs">
+        <div class="start">
+            <p>Starts</p>
+            <h2>06/06/2008</h2>
+        </div>
+        <div class="end">
+            <p>End</p>
+            <h2>26/06/2010</h2>
+        </div>
+    </div>
+</div>
+<div class="signbtn signs">
+    <a href="">To Sign</a>
+</div>
+</div>
+<div class="sign-item">
+    <div class="checkBox custom-checkbox">
+        <input type="checkbox">
+        <span class="checkmark"></span>
+    </div>
+<div class="signs-item">
+    <div class="signs spe">
+        <div class="img">
+            <img src="./../img/earth.png" alt="">
+        </div>
+        <div class="content">
+            <h3><strong>Sofitex</strong></h3>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Metz</p>
+            </div>
+            <div class="carre">
+                <i class="far fa-sticky-note"></i>
+                <p>5050_0</p>
+            </div>
+        </div>
+    </div>
+    <div class="signs">
+        <h2>Process Tech...</h2>
+        <p>S76978</p>
+    </div>
+    <div class="signs">
+        <h2>Bruce H</h2>
+        <p>QA</p>
+    </div>
+    <div class="signs">
+        <div class="start">
+            <p>Starts</p>
+            <h2>06/06/2008</h2>
+        </div>
+        <div class="end">
+            <p>End</p>
+            <h2>26/06/2010</h2>
+        </div>
+    </div>
+</div>
+<div class="signbtn signs">
+    <a href="">To Sign</a>
+</div>
+</div>
+            </div>
+        </section>
+        <!-- End Contract section -->
+
+        <div class="pag container">
+            <div class="pagination">
+                <div class="pag-item">
+                    <a href="">01</a>
+                </div>
+                <div class="pag-item">
+                    <a href="">02</a>
+                </div>
+                <div class="pag-item">
+                    <a href="">03</a>
+                </div>
+                <div class="pag-item">
+                    <a href="">04</a>
+                </div>
+                <div class="pag-item">
+                    <a href="">05</a>
+                </div>
+            </div>
+        </div>
+        </section>
+
     
 </body>
 </html>

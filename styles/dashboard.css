@@ -32,14 +32,21 @@ img {
     position: absolute;
     top: 0;
     right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+  
 .sidenav {
     height: 100vh;
     width: 14%;
     background: #fff;
     position: fixed;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     top: 0;
     left: 0;
 }
@@ -50,7 +57,7 @@ img {
     border-radius: 10px;
     margin-top: 40px;
     text-align: center;
-    width: 80%;
+    width: 220px;
 }
 .sidenav .brand h2{
     text-transform: uppercase;
@@ -64,39 +71,77 @@ img {
 }
 .sidenav .links{
     margin-top: 50px;
+    height: 70%;
+    width: 100%;
+}
+.sidenav .linkss{
+    height: 10%;
     width: 100%;
 }
 .sidenav .link-item{
     padding: 10px 20px;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}.sidenav .link-items {
+    padding: 10px 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
 }
-.sidenav .link-item:last-child{
-    margin-top: 140%;
+.sidenav .link-item a,
+.sidenav .link-items a
+{
+    display: flex;
+    flex-direction: row;
+    text-transform: none;
+    color: #000;
 }
-.sidenav .link-item .icon{
+.sidenav .link-item .icon,
+.sidenav .link-items .icon{
     width: 15%;
 }
-.sidenav .link-item .icon i{
+.sidenav .link-item .icon i,
+.sidenav .link-items .icon i{
     font-size: 20px;
     line-height: 0.7em;
 }
-.sidenav .link-item .content{
+.sidenav .link-item .content,
+.sidenav .link-items .content{
     width: 70%;
 }
-.sidenav .link-item .content h3{
+.sidenav .link-item .content h3,
+.sidenav .link-items .content h3{
     text-align: left;
     margin-left: 20px;
     font-weight: 600;
 }
+.sidenav .link-item:hover,
+    .sidenav .link-items:hover{
+    box-shadow: 2px 2px 5px 2px rgb(0, 0, 0, .07);
+}
+.sidenav .link-item:hover i,
+.sidenav .link-items:hover i{
+    color: #35fc53;
+}
+#header{
+    width: 100%;
+}
 .header{
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     min-height: 8vh;
-    width: 86%;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
 }
@@ -151,20 +196,22 @@ img {
 .header .dashboard{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
-    margin-left: 40px;
-    margin-right: 20%;
+    width: 35%;
+    margin-left: 20px;
 }
 .header .dashboard h2{
     font-size: 20px;
 }
 .header .search{
-    margin-right: 35%;
     border: 1px solid grey;
     padding: 10px 20px;
     border-radius: 15px;
-    width: 300px;
+    width: 20%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
 }
 .header .search i{
     font-size: 14px ;
@@ -178,21 +225,151 @@ img {
     font-size: 14px;
     font-weight: 500;
 }
-.wavebloc {
-    min-height: 15vh;
-    margin-top: 7vh;
+.header .icon{
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.header .icon .notif{
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    right: 0;
+    background: #35fc53;
+    z-index: 5;
+    border: 1px solid rgb(240, 240, 240);
+}
+.header .icon i{
+    font-size: 19px;
+}
+.user{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 45%;
+    margin-right: 40px;
+}
+.img-profil{
+    position: relative;
+    width: 65px;
+    height: 65px;
+}
+.user .img{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px 3px rgb(0, 0, 0,.05);
+}
+.user .img-profil{
+    margin-right: 15px;
+}
+.user .img-profil .notif{
+    position: absolute;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    right: 0;
+    background: #35fc53;
+    z-index: 5;
+    border: 3px solid rgb(240, 240, 240);
+}
+.user .img-profil .notif p{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 2px;
+    font-weight: 600;
+}
+.user .content p{
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+}
+.user .content h2{
+    font-size: 15px;
+}
+.user .arrow{
+    margin-left: 30px;
+}
+.user .arrow i{
+    font-size: 14px;
+    color: #35fc53;
+}
+#wavebloc{
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wavebloc {
+    min-height: 5vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .wavebloc-item{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 350px;
+    width: 25%;
     height: 110px;
-    margin-right: 2.5%;
+    margin-right: 48px;
     background: #fff;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 3px rgb(0, 0, 0,.05);
 }
+/* First wave */
+.custom-shape-divider-bottom-1611480037 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1611480037 svg {
+    position: relative;
+    display: block;
+    width: calc(170% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1611480037 .shape-fill {
+    fill: rgba(26,187,51,.1);
+}
+/* End First wave */
+/* .custom-shape-divider-bottom-1611480372 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1611480372 img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 120px;
+}
+
+.custom-shape-divider-bottom-1611480372 .shape-fill {
+    fill: #59C73299;
+} */
 .wavebloc-item:last-child{
     margin-right: 0;
 }
@@ -201,6 +378,7 @@ img {
     background:#4bb87a;
     margin: 0 20px;
     border-radius: 15px;
+    z-index: 5;
 }
 .wavebloc-item .img i{
     font-size: 25px;
@@ -234,11 +412,12 @@ img {
     flex-wrap: wrap;
 }
 .recent-item{
-    width: 740px;
-    min-height: 37vh;
+    width: 47%;
+    min-height: 20vh;
     background: #fff;
     border-radius: 15px;
     margin: 10px 20px;
+    box-shadow: 2px 2px 5px 3px rgb(0, 0, 0,.05);
 }
 .recent-header{
     display: flex;
@@ -248,9 +427,10 @@ img {
     width: 100%;
 }
 .recent-header .goto{
-    width: 70%;
+    width: 50%;
     position: relative;
     display: flex;
+    justify-content: flex-end;
 }
 .recent-header .goto p{
     position: relative;
@@ -258,19 +438,18 @@ img {
     font-size: 12px;
     font-weight: 600;
     margin-right: 10px;
-    left: 75%;
 }
 .recent-header .goto i{
     color: rgb(0, 0, 0);
     position: relative;
     font-size: 12px;
     font-weight: 600;
-    left: 75%;
+    margin-right: 15px;
 }
 .recent-header h2{
     margin-left: 32px;
     font-size: 20px;
-    width: 30%;
+    width: 50%;
 }
 .recent-top{
     height: 10%;
@@ -302,6 +481,9 @@ img {
     align-items: center;
     border-top: 1px solid #ebebeb;
     padding: 15px 0 0 0;
+}
+.sign i{
+    color: rgba(26,187,51,1);
 }
 .recent-item:last-child .sign,
 .recent-item:last-child li{
@@ -376,6 +558,803 @@ img {
 }
 .signBtn a:hover{
     background: linear-gradient(133deg, rgba(53,252,83,1) 7%, rgba(26,187,51,1) 100%);
-    border: none;
+    border: 2px solid #fff;
     color: #fff;
 }
+.worker-item{
+    position: relative;
+    min-height: 42vh;
+    width: 47%;
+    background: rgba(26,187,51,.9);
+    border-radius: 15px;
+    margin: 10px 20px;
+    box-shadow: 2px 2px 5px 3px rgb(0, 0, 0,.05);
+}
+.worker-item .top{
+    width: 30%;
+    margin: 30px 0 0 30px;
+}
+.worker-item .top h2{
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.worker-item .top h3{
+    color: yellow;
+    font-size: 35px;
+}
+  .carousel{
+      padding-bottom: 20px;
+  }
+  .carousel-cell {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 20%;
+  }
+
+  .carousel-cell:nth-child(1){
+      background: url(./../img/1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+  .carousel-cell:nth-child(2){
+    background: url(./../img/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(3){
+    background: url(./../img/3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(4){
+    background: url(./../img/4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(5){
+    background: url(./../img/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(6){
+    background: url(./../img/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(7){
+    background: url(./../img/7.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(8){
+    background: url(./../img/8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-cell:nth-child(9){
+    background: url(./../img/9.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#contract{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contrat{
+    margin-top: 1vh;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #fff;
+    width: 95%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 3px rgb(0, 0, 0,.07);
+}
+.contrat .header{
+    height: 80px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.contrat .header .current{
+    display: flex;
+    align-items: center;
+}
+.contrat .header .current h2{
+    font-size: 18px;
+    margin-right: 15px;
+}
+.contrat .header .current p{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(129, 129, 129);
+}
+.contrat .list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.contrat .list ul{
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.contrat .list li{
+    list-style: none;
+    width: 22%;
+    font-size: 13px;
+    color: #858585;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contrat .list li:first-child{
+    text-align: center;
+}
+.contrat .list li:last-child{
+    width: 14%;
+}
+.contrat .list li i:first-child{
+    margin-left: 5px;
+    font-size: 11px;
+}
+.contrat .checkBox input{
+    outline: none;
+    border: 2px solid rgb(133, 136, 133);
+    cursor: pointer;
+}
+.contrat .signs-item{
+    justify-content: center;
+    display: flex;
+    width: 80%;
+}
+.contrat .signs{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+}
+.contrat .signbtn{
+    width: 14%;
+}
+/* .contrat .signs:last-child{
+    margin-right: ;
+} */
+.contrat .signs h2,
+.contrat .signs p{
+    text-align: left;
+}
+.contrat .checkBox{
+    width: 6%;
+    display: flex;
+    justify-content: center;
+}
+.signs p{
+    color: rgb(136, 136, 136);
+    font-weight: 600;
+    font-size: 11px;
+}
+.signs i{
+    color: #35fc53;
+    margin-right: 5px;
+}
+.contrat .signs .content .location,
+.contrat .signs .content .carre,
+.contrat .signs .start,
+.contrat .signs .end{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.contrat .signs .start p,
+.contrat .signs .end p{
+    color: rgb(136, 136, 136);
+    font-weight: 600;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.contrat .signs .end p{
+    margin-right: 23px;
+}
+.contrat .signs .start h2,
+.contrat .signs .end h2{
+    font-size: 14px;
+
+}
+.contrat .sign-item{
+    margin-bottom: 10px;
+}
+.list .checkBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 2px;
+}
+.contrat .signbtn a{
+    padding: 10px 20px;
+    width: 50%;
+    background: linear-gradient(133deg, rgba(53,252,83,1) 7%, rgba(26,187,51,1) 100%);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 2px 2px 3px 1px rgba(33, 196, 27,.02) ;
+}
+.signbtn a:hover{
+    background: transparent;
+    border: 2px solid #35fc53;
+    color: #35fc53;
+}
+.custom-checkbox{
+    cursor: pointer;
+}
+.custom-checkbox input{
+    display: none;
+}
+.custom-checkbox input:checked + .checkmark{
+    background-size: 60%;
+}
+.custom-checkbox .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #35fc53;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #35fc53;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/2/27/White_check.svg) center/1200% no-repeat;
+}
+.contrat .spe {
+    display: flex;
+    flex-direction: row;  
+    width: 22%;
+}
+  .contrat .spe .img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  .pag{
+      width: 100%;
+      min-height: 4vh;
+      margin-top: 10px;
+  }
+  .pagination{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+  .pag-item{
+      padding: 5px 9px;
+      position: relative;
+      margin-right: 5px;
+      left: 2%;
+      border-radius: 10px;
+      border: 2px solid rgb(240, 240, 240);
+  }
+  .pag-item a{
+      font-size: 14px;
+      color: #000;
+      width: 100%;
+      height: 100%;
+      font-weight: 500;
+  }
+  .pag-item:hover{
+      border: 2px solid #35fc53;
+  }
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+    .recent-item{
+        width: 45%;
+    }
+    .worker-item{
+        width: 45%;
+        min-height: 42vh;
+    }
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .sidenav .brand{
+        padding: 10px 20px;
+        background: rgb(240, 240, 240);
+        position: relative;
+        border-radius: 10px;
+        margin-top: 40px;
+        text-align: center;
+        width: 150px;
+    }
+    .sidenav .brand h2{
+        text-transform: uppercase;
+        line-height: 25px;
+        font-size: 27px;
+        color: #35fc53;
+    }
+    .sidenav .brand h3{
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-size: 12px;
+    }
+    .recent-item{
+        width: 90%;
+    }
+    .worker-item{
+        width: 90%;
+    }
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .recent-item{
+        width: 90%;
+    }
+    .worker-item{
+        width: 90%;
+    }
+    .header .dashboard h2{
+        display: none;
+    }
+      .header .dashboard{
+          margin-right: 40px;
+      }
+      .signs p,
+      .signs h2,
+      .signs h3{
+          color: rgb(0, 0, 0);
+          font-size: 12px;
+      }
+      .signs p,
+      .signs h2{
+          margin-right: 10px;
+      }
+      .header .search{
+          margin-right: 30px;
+      }
+      .header{
+          width: 100%;
+      }
+      #main{
+          width: 100%;
+      }
+      .sidenav{
+          display: none;
+      }
+    .contrat .signs-item{
+        flex-direction: column;
+    }
+    .contrat .sign-item{
+        flex-direction: row;
+    }
+    .contrat .signs{
+        width: 70%;
+        margin-bottom: 2px;
+    }
+    .contrat .checkBox{
+        width: 5%;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .contrat .signbtn{
+        width: 15%;
+    }
+    .contrat .signbtn a{
+        width: 90px;
+        margin-right: 10px;
+    }
+    .contrat .list {
+        display: none;
+    }
+    .contrat .signs{
+        flex-direction: column;
+    }
+    .user .content{
+        display: none;
+    }
+    .contrat .img {
+        display: none;
+    }
+    /* CSS */
+    .wavebloc .wavebloc-item p{
+        display: none;
+    }
+    .contrat .signs .start,
+    .contrat .signs .end{
+        flex-direction: row;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .recent-item{
+        width: 90%;
+    }
+    .wavebloc .wavebloc-item p{
+        display: none;
+    }
+    .worker-item{
+        width: 90%;
+    }
+    .header .dashboard h2{
+        display: none;
+    }
+    .contrat .img {
+        display: none;
+    }
+    .header .dashboard{
+        margin-right: 40px;
+    }
+    .signs p,
+    .signs h2,
+    .signs h3{
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+    }
+    .signs p,
+    .signs h2{
+        margin-right: 10px;
+    }
+    .header .search{
+        margin-right: 30px;
+    }
+    .header{
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+    }
+    .sidenav{
+        display: none;
+    }
+  .contrat .signs-item{
+      flex-direction: column;
+  }
+  .contrat .sign-item{
+      flex-direction: row;
+  }
+  .contrat .signs{
+      width: 70%;
+      margin-bottom: 2px;
+      flex-direction: column;
+  }
+  .contrat .checkBox{
+      width: 5%;
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+  .contrat .signbtn{
+      width: 15%;
+  }
+  .contrat .signbtn a{
+      width: 90px;
+      margin-right: 10px;
+  }
+  .contrat .list {
+      display: none;
+  }
+  .contrat .signs{
+      flex-direction: column;
+  }
+  .user .content{
+      display: none;
+  }
+  .contrat .signs .start,
+  .contrat .signs .end{
+      flex-direction: row;
+  }
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+      .recent-top{
+          display: none;
+      }
+    .contrat .sign-item{
+        flex-direction: row;
+    }
+    .recent-item .sign-item{
+        flex-direction: column;
+    }
+    .signBtn {
+        position: absolute;
+        right: 15%;
+    }
+    .sign{
+        width: 90%;
+        margin-bottom: 5px;
+    }
+    .sign:nth-child(5){
+        width: 80px;
+    }
+    .sign .date{
+        width: 90%;
+    }
+    .sign:nth-child(4){
+        margin-right: 0;
+    }
+      .worker-item{
+          min-height: 30vh;
+      }
+    .wavebloc-item .img{
+        padding: 8px 16px;
+        margin: 0 auto;
+      }
+    .wavebloc-item{
+        width: 80px;
+        margin-right: 15px;
+        height: 80px;
+    }
+    .wavebloc-item p{
+        display: none;
+    }
+    .wavebloc-item h2{
+        display: none;
+    }
+    .recent-item{
+        width: 90%;
+    }
+    .worker-item{
+        width: 90%;
+    }
+    .header .dashboard{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .header .user{
+        width: 80%;
+        justify-content: flex-end;
+    }
+    .header .dashboard h2,
+    .header .search{
+        display: none;
+    }
+    .contrat .img {
+        display: none;
+    }
+    .signs p,
+    .signs h2,
+    .signs h3{
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+    }
+    .signs p,
+    .signs h2{
+        margin-right: 10px;
+    }
+    .header .search{
+        margin-right: 30px;
+    }
+    .header{
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+    }
+    .sidenav{
+        display: none;
+    }
+  .contrat .signs-item{
+      flex-direction: column;
+  }
+  .contrat .signs{
+      width: 70%;
+      margin-bottom: 2px;
+      flex-direction: column;
+  }
+  .contrat .checkBox{
+      width: 5%;
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+  .contrat .signbtn{
+      width: 15%;
+  }
+  .contrat .signbtn a{
+        width: 60px;
+        margin-right: 10px;
+  }
+  .contrat .list {
+      display: none;
+  }
+  .user .content{
+      display: none;
+  }
+  .contrat .signs .start,
+  .contrat .signs .end{
+      flex-direction: row;
+  }
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+      .recent-top{
+          display: none;
+      }
+      .sign-item{
+          flex-direction: column;
+      }
+      .signBtn {
+          position: absolute;
+          right: 15%;
+      }
+      .sign{
+          width: 90%;
+          margin-bottom: 5px;
+      }
+      .sign:nth-child(5){
+          width: 80px;
+      }
+      .sign .date{
+          width: 90%;
+      }
+      .sign:nth-child(4){
+          margin-right: 0;
+      }
+    .worker-item{
+        min-height: 30vh;
+    }
+      .wavebloc-item .img{
+        padding: 5px 10px;
+        margin: 0 auto;
+      }
+    .wavebloc-item{
+        width: 60px;
+        margin-right: 10px;
+        height: 60px;
+    }
+    .wavebloc-item p{
+        display: none;
+    }
+    .wavebloc-item h2{
+        display: none;
+    }
+    .recent-item{
+        width: 90%;
+    }
+    .worker-item{
+        width: 90%;
+    }
+      .contrat .signs .start,
+      .contrat .signs .end{
+          flex-direction: row;
+      }
+    .header .dashboard{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .user .img-profil{
+        margin-right: 0;
+    }
+    .header .arrow{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header .user{
+        width: 80%;
+        justify-content: flex-end;
+    }
+    .header .icon{
+        margin-right: 15px;
+    }
+    .header .dashboard h2,
+    .header .search{
+        display: none;
+    }
+    .contrat .img {
+        display: none;
+    }
+    .signs p,
+    .signs h2,
+    .signs h3{
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+    }
+    .signs p,
+    .signs h2{
+        margin-right: 10px;
+    }
+    .header .search{
+        margin-right: 30px;
+    }
+    .header{
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+    }
+    .sidenav{
+        display: none;
+    }
+  .contrat .signs-item{
+      flex-direction: column;
+  }
+  .contrat .sign-item{
+      flex-direction: row;
+  }
+  .contrat .signs{
+      width: 70%;
+      margin-bottom: 2px;
+      flex-direction: column;
+  }
+  .contrat .checkBox{
+      width: 5%;
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+  .contrat .signbtn{
+      width: 30%;
+  }
+  .contrat .signbtn a{
+      width: 60px;
+      margin-right: 10px;
+  }
+  .contrat .list {
+      display: none;
+  }
+  .user .content{
+      display: none;
+  }
+    
+    /* CSS */
+    
+  }
