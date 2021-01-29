@@ -801,6 +801,17 @@ img {
     text-align: center;
     box-shadow: 2px 2px 3px 1px rgba(33, 196, 27,.02) ;
 }
+.contrat .li:nth-child(4){
+    text-align: left;
+}
+.contrat .sign-item:nth-child(4) .signbtn a{
+    background: rgb(216, 216, 40);
+}
+.contrat .sign-item:nth-child(4) .signbtn a:hover{
+    border: 2px solid rgb(216, 216, 40);
+    color: rgb(216, 216, 40);
+    background: transparent;
+}
 .signbtn a:hover{
     background: transparent;
     border: 2px solid #35fc53;
@@ -864,6 +875,7 @@ img {
   .pag-item:hover{
       border: 2px solid #35fc53;
   }
+
 
 
 /* 
